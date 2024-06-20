@@ -1,0 +1,141 @@
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  margin: 0;
+  padding: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eef0f1;
+  font-family: "Noto Serif JP", serif;
+  color: #79614e;
+}
+
+.container {
+  text-align: center;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+input {
+  box-sizing: content-box;
+  padding: 0.6rem;
+  width: 12rem;
+}
+
+button {
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  background-color: #5fa6b0;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.loading {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.63rem;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.card {
+  width: 100%;
+  padding-bottom: 2%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.63rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 88%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-top: 8%;
+
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.card img.loaded {
+  opacity: 1;
+}
+
+.card-text {
+  padding: 0.2rem 1.1rem;
+  min-height: 6rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  text-align: left;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* メディアクエリ: スマホ版 */
+@media (max-width: 768px) {
+  .input-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
