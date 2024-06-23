@@ -24,7 +24,7 @@ Unsplash APIまたはDog CEO's Dog APIを使用してランダムな写真を取
 
 ## 使用技術
 
-- Vue3.3（CDN）
+- Vue3.4（CDN）
 - HTML 
 - CSS
 - JavaScript
